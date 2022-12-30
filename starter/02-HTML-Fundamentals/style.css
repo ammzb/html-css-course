@@ -3,6 +3,12 @@ body {
   font-family: sans-serif;
 }
 
+.container {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
 h1,
 h2,
 h3 {
@@ -15,14 +21,36 @@ h1 {
   font-style: italic;
 }
 
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
 h2 {
   font-size: 25px;
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: yellow;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  right: -25px;
 }
 
 p {
   font-size: 20px;
   line-height: 1.5;
 }
+
+/* p::first-line {
+  color: blue;
+} */
 
 h4 {
   text-align: center;
@@ -66,8 +94,10 @@ aside {
   border: 5px solid #1098ad;
 }
 
-a:link {
+nav a:link {
   text-decoration: none;
+  /* background-color: orangered; */
+  margin: 20px;
 }
 
 /* a:visited {
@@ -80,4 +110,11 @@ a:hover {
 
 a:active {
   text-decoration: underline dotted blue;
+}
+
+button {
+  position: absolute;
+  font-size: 23px;
+  bottom: 50px;
+  right: 50px;
 }
